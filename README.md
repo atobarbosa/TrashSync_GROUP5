@@ -1,1 +1,1 @@
-# TrashSync_GROUP5
+Our project aims to support local residents, businesses, and waste collection agencies. By providing user-friendly design and effective communication between consumers and service providers, we seek to encourage greater participation in responsible garbage disposal and recycling actions.
