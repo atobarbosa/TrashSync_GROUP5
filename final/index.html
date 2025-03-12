@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrashSync - Smart Waste Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-recycle"></i> TrashSync</h1>
+        <nav>
+            <ul>
+                <li><a href="#schedule"><i class="fas fa-calendar-plus"></i> Schedule Pickup</a></li>
+                <li><a href="#report"><i class="fas fa-exclamation-triangle"></i> Report</a></li>
+                <li><a href="#hire"><i class="fas fa-user-plus"></i> Hire Cleaners</a></li>
+                <li><a href="#pickups"><i class="fas fa-list-check"></i> View Pickups</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="schedule">
+            <h2>Schedule Waste Pickup</h2>
+            <form id="pickupForm">
+                <div class="form-group">
+                    <input type="text" id="user" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="location" placeholder="Address/Location" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit"><i class="fas fa-calendar-check"></i> Schedule Pickup</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="report">
+            <h2>Report Uncollected Trash</h2>
+            <form id="reportForm">
+                <div class="form-group">
+                    <input type="number" id="pickupId" placeholder="Pickup ID" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit"><i class="fas fa-flag"></i> Report</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- New Hire Cleaners Section -->
+        <section id="hire">
+            <h2>Hire Professional Cleaners</h2>
+            <form id="hireForm">
+                <div class="form-group">
+                    <select id="cleaningType" required>
+                        <option value="" disabled selected>Select Service Type</option>
+                        <option value="residential">Residential Cleaning</option>
+                        <option value="commercial">Commercial Cleaning</option>
+                        <option value="specialWaste">Special Waste Removal</option>
+                        <option value="recycling">Recycling Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="hireLocation" placeholder="Address/Location" required>
+                </div>
+                <div class="form-group">
+                    <input type="datetime-local" id="hireDateTime" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="hireDetails" placeholder="Additional details (e.g., square footage, special instructions)" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="contactName" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit"><i class="fas fa-handshake"></i> Request Cleaner</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="pickups">
+            <h2>Scheduled Pickups</h2>
+            <div class="pickup-container">
+                <ul id="pickupList"></ul>
+            </div>
+        </section>
+
+        <!-- New Cleaners List Section -->
+        <section id="cleaners">
+            <h2>Available Cleaners</h2>
+            <div class="cleaner-container">
+                <ul id="cleanerList">
+                    <!-- Will be populated by JavaScript -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TrashSync - Creating a cleaner world</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
